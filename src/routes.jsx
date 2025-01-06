@@ -1,14 +1,17 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Home from "./pages/home";
-import Sobre from "./pages/sobre";
+import Home from "./pages/Home";
+import Sobre from "./pages/Sobre";
+import App from "./App";
 
 const Rotas = () => {
   return (
     <BrowserRouter>
-      <Routes>
-        <Route Component={Home} path="/" />
-        <Route Component={Sobre} path="/sobre" />
-      </Routes>
+      <App>
+        <Routes>
+          <Route Component={Home} path="/" />
+          <Route Component={Sobre} path="/sobre" />
+        </Routes>
+      </App>
     </BrowserRouter>
   );
 };
